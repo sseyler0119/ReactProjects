@@ -1,21 +1,15 @@
 import HouseRow from "./houseRow";
-import React, { useEffect, useState } from "react";
+import useHouses from "../hooks/useHouses";
+import loadingStatus from "../helpers/loadingStatus";
+import LoadingIndicator from "./loadingIndicator";
 
 
 const HouseList = () => {
-    const [houses, setHouses] = useState([]);
-    useEffect(() => {
-        const fetchHouses = async () => {
-            const response = await fetch("api/houses");
-            const houses = await response.json();
-            setHouses(houses);
-        }
-        fetchHouses();
-    });
-    // const [counter, setCounter] = useState(0);
-    // const buttonClicked = () =>  setCounter(current => counter + 1);
+    const {houses, setHouses, loadingState} = useHouses();
 
-    const addHouse = () => {
+    if(loadingState !== loadingStatus.loaded)
+        return <LoadingIndicator loadingState={loadingState} />
+     const addHouse = () => {
         setHouses([
             ...houses, // extract all elements from houses array and put in the new one we are now defining
             { // new element to be added
@@ -29,7 +23,6 @@ const HouseList = () => {
 
     return (
         <>
-            {/* {counter} */}
             <div className="row mb-2">
                 <h5 className="themeFontColor text-center">
                     Houses currently on market
@@ -45,7 +38,7 @@ const HouseList = () => {
                 </thead>
                 <tbody>
                     {houses.map((h) => (
-                        <HouseRow key={h.id} house={h} />
+                        <HouseRow key={h.id} house={h}/>
                     ))}
                 </tbody>
             </table>

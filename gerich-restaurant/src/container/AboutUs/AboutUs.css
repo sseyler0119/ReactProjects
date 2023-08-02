@@ -50,7 +50,7 @@
     columns: var(--color-grey);
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (min-width: 2000px) {
     .app__aboutus-content_knife img {
         height: 1010px;
     }
@@ -69,11 +69,17 @@
     .app__aboutus-content_knife {
         margin: 4rem 0;
     }
+    .app__aboutus-content_knife img {
+        height: 750px;
+    }
 }
 
 @media screen and (max-width: 650px) {
     .app__aboutus-overlay img {
         width: 80%;
         height: 320px;
+    }
+    .app__aboutus-content_knife img {
+        height: 470px;
     }
 }

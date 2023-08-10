@@ -7,9 +7,10 @@ import { bookdata } from "../bookdata";
 const BookList = () => {
   return (
     <>
+      <h1>amazon best sellers</h1>
       <section className='booklist'>
-        {bookdata.map((book) => {
-          return <Book {...book} key={book.id} />
+        {bookdata.map((book, index) => {
+          return <Book {...book} key={book.id} number={index} />
         })}
       </section>
     </>

@@ -253,8 +253,7 @@ ul {
   margin-top: 1rem;
 }
 /* ============= PROJECT CSS =============== */
-
-.jobs-center {
+.job-center {
   width: 80vw;
   margin: 5rem auto;
   max-width: var(--max-width);
@@ -276,10 +275,12 @@ ul {
   cursor: pointer;
   transition: var(--transition);
 }
+
 .job-btn:hover {
   color: var(--primary-500);
-  box-shadow: 0 2px var(--primary-500);
+  box-shadow: 0 2px var(--primary-500); /* using box-shadow instead of border prevents text from shifting*/
 }
+
 .active-btn {
   color: var(--primary-500);
   box-shadow: 0 2px var(--primary-500);
@@ -294,6 +295,7 @@ ul {
   border-radius: var(--borderRadius);
   margin: 0.75rem 0;
 }
+
 .job-date {
   color: var(--grey-500);
   letter-spacing: var(--letterSpacing);
@@ -308,14 +310,15 @@ ul {
   margin-bottom: 1.25rem;
 }
 
+.job-desc p {
+  color: var(--grey-600);
+  line-height: 1.5;
+}
+
 .job-icon {
   color: var(--primary-500);
 }
 
-.job-desc p {
-  color: var(--grey-700);
-  line-height: 1.5;
-}
 
 @media screen and (min-width: 992px) {
   .jobs-center {
@@ -323,17 +326,21 @@ ul {
     display: grid;
     grid-template-columns: 200px 1fr;
     column-gap: 4rem;
-  }
+  } 
+
   .btn-container {
     flex-direction: column;
     justify-content: flex-start;
   }
+
   .job-btn {
     margin-bottom: 1rem;
   }
+
   .job-btn:hover {
     box-shadow: -2px 0px var(--primary-500);
   }
+
   .active-btn {
     box-shadow: -2px 0px var(--primary-500);
   }

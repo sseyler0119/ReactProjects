@@ -1,5 +1,5 @@
 import { useGlobalContext } from "./context";
-import {Navbar, Hero, Sidebar, Submenu} from './components';
+import {Navbar, Hero, Sidebar, Submenu} from './components/index';
 const App = () => {
   
   return <main>

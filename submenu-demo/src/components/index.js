@@ -3,9 +3,9 @@ import Hero from './Hero';
 import Sidebar from './Sidebar';
 import Submenu from './Submenu';
 
-export default [
+export {
     Navbar,
     Hero,
     Sidebar,
     Submenu
-]
+}

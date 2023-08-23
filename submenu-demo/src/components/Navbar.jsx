@@ -1,17 +1,25 @@
 import {FaBars} from 'react-icons/fa';
 import { useGlobalContext } from '../context';
 import './navbar.css';
+import NavLinks from './NavLinks';
 
 const Navbar = () => {
-  const {openSidebar} = useGlobalContext();
+  const {openSidebar, setPageId} = useGlobalContext();
+
+  const handleSubmenu = (e) => {
+    if(!e.target.classList.contains('nav-link')) {
+      setPageId(null);
+    }
+  }
+
   return (
-    <nav>
+    <nav onMouseOver={handleSubmenu}>
       <div className="nav-center">
         <h3 className='logo'>Strapi</h3>
         <button className="toggle-btn" onClick={openSidebar}>
           <FaBars/>
         </button>
-
+        <NavLinks />
       </div>
     </nav>
   )

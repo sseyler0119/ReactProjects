@@ -4,7 +4,7 @@ const App = () => {
   
   return <main>
     <Navbar />
-    <Hero />
+    {/* <Hero /> */}
     <Sidebar/>
     <Submenu/>
   </main>;

@@ -1,10 +1,14 @@
-import { Navbar } from "./components/index";
+import { About, Hero, Navbar, Skills, Projects } from "./components/index";
 
 const App = () => {
   return (
 
      <>
      <Navbar />
+     <Hero />
+     <Skills />
+     <About />
+     <Projects />
      </>
   
     )

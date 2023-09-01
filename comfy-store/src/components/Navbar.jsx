@@ -34,7 +34,7 @@ const Navbar = () => {
           {/* TITLE */}
           <NavLink
             to='/'
-            className='hidden lg:flex btn btn-primary text-3xl items-center'
+            className='hidden lg:flex btn btn-primary text-3xl items-center rounded-lg'
           >
             C
           </NavLink>
@@ -45,7 +45,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52'>
+              className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-lg w-52'>
                <NavLinks />
             </ul>
           </div>

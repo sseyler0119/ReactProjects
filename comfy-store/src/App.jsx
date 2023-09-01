@@ -1,7 +1,16 @@
 import { About, Cart, Checkout, Error, HomeLayout, 
   Landing, Login, Orders, Products, Register, 
   SingleProduct } from "./pages"
+import { ErrorElement } from "./components";
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
+
+// loaders
+import {loader as landingLoader} from './pages/Landing';
+
+// actions 
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -12,6 +21,8 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landing />,
+        errorElement: <ErrorElement />,
+        loader: landingLoader,
       },
       {
         path: 'about',

@@ -1109,7 +1109,7 @@ const Hero = () => {
           qui lorem cupidatat commodo.
         </p>
         <div className='mt-10 '>
-          <Link to='products' className='btn btn-primary '>
+          <Link to='products' className='btn btn-primary'>
             Our Products
           </Link>
         </div>

@@ -6,7 +6,7 @@ const SubmitBtn = ({ text }) => {
 
 
   return (
-    <button type='submit' className='btn btn-primary btn-block' disabled={isSubmitting}>
+    <button type='submit' className='btn btn-primary btn-block rounded-lg' disabled={isSubmitting}>
         {isSubmitting? <>
         <span className='loading loading-spinner'></span>
         sending...

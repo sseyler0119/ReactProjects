@@ -20,12 +20,11 @@ const Header = () => {
         {user ? (     
           <div className="flex gap-x-2 sm:gap-x-8 items-center">
             <p className="text-xs sm:text-sm">Hello, {user.username}</p>
-            <button className="btn btn-xs btn-outline btn-primary" onClick={handleLogout}>
+            <button className="btn btn-xs btn-outline btn-primary rounded-lg" onClick={handleLogout}>
               logout
             </button>
           </div>
-          )
-          : (
+          ) : (
             <div className='flex gap-x-6 justify-center items-center'>
           <Link to='/login' className='link link-hover text-xs sm:text-sm'>
             Sign in / Guest

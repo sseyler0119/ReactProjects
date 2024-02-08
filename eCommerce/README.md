@@ -395,3 +395,6 @@ utils/constants.js
 export const single_product_url = `/.netlify/functions/single-product?id=`;
 // export const single_product_url = `https://course-api.com/react-store-single-product?id=`;
 ```
+
+
+patmi6sKW8R2cmKVO.07d2ce8f5d01ab0fbfeae16908c49ed62c93f2995f502ee4df78a4642f6cc237

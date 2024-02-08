@@ -39,7 +39,8 @@ const SingleProductPage = () => {
     return <Error />
   }
 
-  const {name, price, description, stock, stars, reviews, id:sku, company, images } = product;
+  const {name, price, description, stock, stars, reviews, id:sku, style, images } = product;
+  console.log(style);
   return (
     <Wrapper>
       <PageHero title={name} product={product} />
@@ -63,8 +64,8 @@ const SingleProductPage = () => {
               {sku}
             </p>
             <p className='info'>
-              <span>Brand : </span>
-              {company}
+              <span>Style : </span>
+              {style}
             </p>
             <hr />
             {stock > 0 && <AddToCart product={product} />}
